@@ -1,48 +1,73 @@
-# Kitti — Native Android AI Voice Assistant
+# 🎤 Kitti - Smart Voice Assistant
 
-Kitti is a Kotlin + Jetpack Compose Android assistant starter project designed around official Android APIs.
+**Kitti** হল একটি স্মার্ট ভয়েস অ্যাসিস্ট্যান্ট অ্যাপ যা **2GB RAM** এর ফোনেও নির্বিঘ্নে চলে।
 
-## Build
+## ✨ ফিচার
 
-Open this folder in Android Studio and let Gradle sync. Then run the `app` configuration on an Android 8.0+ device.
+- 🎤 বাংলা ভয়েস রিকগনিশন
+- 📱 YouTube, WhatsApp, Facebook খোলা
+- 🗺️ Google Maps ইন্টিগ্রেশন
+- 🔊 Text-to-Speech (বাংলা)
+- 📜 কমান্ড হিস্ট্রি
+- 🌓 ডার্ক/লাইট থিম
+- ⚡ লাইটওয়েট & ফাস্ট
 
-No AI/API/configuration key is required by this project.
+## 🚀 APK তৈরি করুন
 
-## What is implemented
+### প্রয়োজন:
+- Android Studio
+- Android SDK 21+
+- JDK 11+
 
-- Bengali/English/Arabic/Hindi speech recognition attempt
-- Natural-ish command routing for common app/settings actions
-- App launching for YouTube, WhatsApp, Instagram, Facebook, Maps, Camera, Settings
-- Google/YouTube search intents
-- Android AlarmClock timer/alarm intents
-- Calling by explicit phone number using official CALL_PHONE permission
-- Text-to-Speech responses
-- Local command history with clear button
-- Dark/light Material 3 UI
-- Permission requests through Android
-- Basic incoming SMS receiver notification without exposing SMS body
+### স্টেপ:
 
-## Important Android limitations
+1. **Clone করুন:**
+```bash
+git clone https://github.com/freefiergm23-max/Rahat-khan.git
+cd Rahat-khan
+```
 
-Kitti cannot legitimately become an unrestricted controller of the phone. Android intentionally blocks normal apps from silently reading WhatsApp/Gmail private data, bypassing permissions, or changing protected settings.
+2. **Android Studio এ খুলুন:**
+- File → Open → এই ফোল্ডার
 
-Direct WhatsApp message sending, Gmail inbox access, contact-based calling, full background hotword ("Hey Kitti" while the app is closed), and automatic reading of private notification/message content require additional official APIs, default-app roles, notification access, foreground-service rules, or user interaction. This project does not bypass those protections.
+3. **Gradle Sync:**
+- Gradle sync সম্পূর্ণ হওয়ার জন্য অপেক্ষা করুন
 
-For a production release, add a backend/AI provider only if desired. The current project uses local routing, so it does not ask for an API key.
+4. **APK Build:**
+```
+Build → Build Bundle(s) / APK(s) → Build APK(s)
+```
 
-## Security
+5. **APK পাবেন:**
+```
+app/build/outputs/apk/debug/app-debug.apk
+```
 
-- No hidden screen recording
-- No permission bypass
-- No private WhatsApp/Gmail database access
-- No secret microphone recording
-- No remote-control server
-- No embedded secret/configuration key
+### ডিভাইসে ইনস্টল:
+```bash
+adb install app/build/outputs/apk/debug/app-debug.apk
+```
 
-## Low-end devices
+## 📋 কমান্ড উদাহরণ
 
-The UI uses Jetpack Compose and avoids heavyweight ML models, so it is designed to remain relatively lightweight. Actual speech recognition is provided by Android/device speech services.
+- "ইউটিউব খুলো"
+- "হোয়াটসঅ্যাপ চালু করো"
+- "ম্যাপ খুলুন"
+- "ফেসবুক খোলো"
+- "ইনস্টাগ্রাম চালু করো"
 
-## Download website
+## ⚙️ অপটিমাইজেশন
 
-A simple deploy-ready landing/download page can be placed in `website/`. A public website cannot be hosted by this local project itself; publish that folder to a static hosting service if you want a public download page.
+✅ Minimal dependencies  
+✅ ProGuard minification সক্রিয়  
+✅ 2GB+ RAM ডিভাইসের জন্য পরীক্ষিত  
+✅ দ্রুত লোডিং  
+✅ স্মুথ পারফরম্যান্স  
+
+## 📄 লাইসেন্স
+
+MIT License - অবাধে ব্যবহার করুন
+
+---
+
+**কোন সমস্যা?** আমাদের GitHub Issues এ জানান! 🚀
